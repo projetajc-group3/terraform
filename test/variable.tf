@@ -17,7 +17,3 @@ variable "instance_type" {
 variable "vol_size" {
     default = 8
 }
-
-variable "ec2_ip" {
-    default = "0.0.0.0"
-}
