@@ -14,3 +14,7 @@ module "ec2_creation" {
     ec2_vol_size = var.vol_size
     sg_id = module.sg_creation.sg_id
 }
+    
+output "ec2_ip" {
+    value = module.ec2_creation.ec2_public_ip
+}
