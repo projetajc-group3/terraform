@@ -1,4 +1,4 @@
 provider "aws" {
   region                  = "us-east-1"
-  shared_credentials_file = "/Users/renaudsautour/Downloads/PROJET/terraform/credentials"
+  shared_credentials_file = "/var/lib/jenkins/workspace/credentials"
 }
