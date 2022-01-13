@@ -17,7 +17,7 @@ resource "aws_instance" "myec2" {
     inline = [
       "sudo apt update -y",
       "sudo apt install ansible -y",
-      "sleep(5)",
+      "sleep 5",
       "git clone https://github.com/projetajc-group3/docker_role_deploy.git",
       "cd cd docker_role_deploy/",
       "ansible-galaxy install -r roles/requirements.yml",
