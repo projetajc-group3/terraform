@@ -13,5 +13,12 @@ resource "aws_instance" "myec2" {
     volume_size = var.ec2_vol_size
   }
 
+  user_data = <<-EOF
+              #!/bin/bash
+              sudo apt update -y
+              sudo apt install ansible -y
+              EOF
+
   vpc_security_group_ids = [var.sg_id]
+  
 }
