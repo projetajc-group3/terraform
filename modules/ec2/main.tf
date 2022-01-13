@@ -13,7 +13,17 @@ resource "aws_instance" "myec2" {
     volume_size = var.ec2_vol_size
   }
 
-
+  user_data = <<-EOF
+              #!/bin/bash
+              sudo apt update -y
+              sudo apt install ansible -y
+              sleep 5
+              git clone https://github.com/projetajc-group3/docker_role_deploy.git
+              cd cd docker_role_deploy/
+              ansible-galaxy install -r roles/requirements.yml
+              ansible-playbook -i hosts.yml docker.yml
+              EOF
+              
   vpc_security_group_ids = [var.sg_id]
 
 }
