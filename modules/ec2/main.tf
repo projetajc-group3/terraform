@@ -16,7 +16,7 @@ resource "aws_instance" "myec2" {
   user_data = <<-EOF
               #!/bin/bash
               sudo apt update -y
-              sudo apt install ansible -y
+              sudo apt install ansible git -y
               sleep 5
               git clone https://github.com/projetajc-group3/docker_role_deploy.git
               cd cd docker_role_deploy/
