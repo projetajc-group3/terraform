@@ -24,7 +24,7 @@ resource "aws_instance" "myec2" {
               sudo rm -rf docker_role_deploy
               git clone https://github.com/projetajc-group3/kubernetes_role_deploy.git
               ansible-galaxy install -r kubernetes_role_deploy/roles/requirements.yml
-              ansible-playbook -i kubernetes_role_deploy/hosts.yml kubernetes_role_deploy/docker.yml
+              ansible-playbook -i kubernetes_role_deploy/hosts.yml kubernetes_role_deploy/kubernetes.yml
               sudo rm -rf kubernetes_role_deploy       
               EOF
               
