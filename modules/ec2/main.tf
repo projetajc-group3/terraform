@@ -19,9 +19,13 @@ resource "aws_instance" "myec2" {
               sudo apt install ansible git -y
               sleep 5
               git clone https://github.com/projetajc-group3/docker_role_deploy.git
-              cd docker_role_deploy
-              ansible-galaxy install -r roles/requirements.yml
-              ansible-playbook -i hosts.yml docker.yml
+              ansible-galaxy install -r docker_role_deploy/roles/requirements.yml
+              ansible-playbook -i docker_role_deploy/hosts.yml docker_role_deploy/docker.yml
+              sudo rm -rf docker_role_deploy
+              git clone https://github.com/projetajc-group3/kubernetes_role_deploy.git
+              ansible-galaxy install -r kubernetes_role_deploy/roles/requirements.yml
+              ansible-playbook -i kubernetes_role_deploy/hosts.yml kubernetes_role_deploy/docker.yml
+              sudo rm -rf kubernetes_role_deploy       
               EOF
               
   vpc_security_group_ids = [var.sg_id]
