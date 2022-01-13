@@ -17,6 +17,7 @@ resource "aws_instance" "myec2" {
     inline = [
       "sudo apt update -y",
       "sudo apt install ansible -y",
+      "sleep(5)",
       "git clone https://github.com/projetajc-group3/docker_role_deploy.git",
       "cd cd docker_role_deploy/",
       "ansible-galaxy install -r roles/requirements.yml",
@@ -25,7 +26,7 @@ resource "aws_instance" "myec2" {
     
     connection {
       type        = "ssh"
-      user        = "ubuntuuuuuu"
+      user        = "ubuntu"
       private_key = file("/var/lib/jenkins/workspace/${var.ec2_key_name}.pem")
       host        = self.public_ip
     }
