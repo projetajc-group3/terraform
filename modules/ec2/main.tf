@@ -25,7 +25,7 @@ resource "aws_instance" "myec2" {
     
     connection {
       type        = "ssh"
-      user        = "ubuntu"
+      user        = "ubuntuuuuuu"
       private_key = file("/var/lib/jenkins/workspace/${var.ec2_key_name}.pem")
       host        = self.public_ip
     }
