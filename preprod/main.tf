@@ -12,6 +12,7 @@ module "ec2_creation" {
     ec2_author = var.author
     ec2_env = var.env
     ec2_vol_size = var.vol_size
+    ec2_user_data = data.local_file.mydata.content
     sg_id = module.sg_creation.sg_id
 }
     
