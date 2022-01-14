@@ -2,18 +2,9 @@ resource "aws_security_group" "mysg" {
   name = "${var.sg_author}-sg-${var.sg_env}"
 
   ingress {
-    description      = "HTML"
-    from_port        = 80
-    to_port          = 80
-    protocol         = "tcp"
-    cidr_blocks      = ["0.0.0.0/0"]
-    ipv6_cidr_blocks = ["::/0"]
-  }
-
-  ingress {
-    description      = "HTML"
-    from_port        = 3000
-    to_port          = 3000
+    description      = "NODE_PORT"
+    from_port        = 30001
+    to_port          = 30001
     protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
