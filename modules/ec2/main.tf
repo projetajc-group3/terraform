@@ -12,8 +12,6 @@ resource "aws_instance" "myec2" {
     delete_on_termination = true
     volume_size = var.ec2_vol_size
   }
-
-  user_data = var.ec2_user_data
               
   vpc_security_group_ids = [var.sg_id]
 
