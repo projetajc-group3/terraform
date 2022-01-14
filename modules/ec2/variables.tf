@@ -34,6 +34,12 @@ variable "ec2_vol_size" {
     default = 8
 }
 
+#User data for the instance
+variable "ec2_user_data" {
+    type = string
+    default = ""
+}
+
 #Id of the security group to associate
 variable "sg_id" {
     type = string
