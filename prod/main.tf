@@ -1,5 +1,5 @@
 module "sg_creation" {
-    source = "../modules/sg"
+    source = "../modules/sg_prod"
     sg_author = var.author
     sg_env = var.env
 }
