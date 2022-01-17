@@ -21,7 +21,3 @@ variable "vol_size" {
 variable "region" {
     default = "us-east-1"
 }
-
-variable "credential_file" {
-    default = "/Users/renaudsautour/Downloads/PROJET/terraform/credentials"
-}
