@@ -3,7 +3,7 @@
 <br>
 
 Ce repository contient l'ensemble des manifests nécessaire à la création 
-de deux instance ec2 et de deux Backend S3 dans AWS :
+de deux instances ec2 (Ubuntu Focal) et de deux Backend S3 dans AWS :
 
 * Pré-Production :
   - t2.medium
